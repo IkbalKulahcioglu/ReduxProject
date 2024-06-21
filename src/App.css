@@ -4,3 +4,24 @@
     background-color: #B1AFFF;
     color:white;
 }
+
+.navDiv{
+    position:relative
+}
+
+.itemsIcon{
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    height: 24px;
+    width: 21px;
+
+}
+
+.itemDiv{
+    background-color: white;
+    color: purple;
+    width: 20px;
+    text-align: center;
+    border-radius: 50%;
+}
