@@ -3,7 +3,7 @@ import muffinItems from '../muffinItems'
 
 const initialState = {
     cartItems: muffinItems,
-    quantity: 0,
+    quantity: 1,
     total: 0,
 };
  

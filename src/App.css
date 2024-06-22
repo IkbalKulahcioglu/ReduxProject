@@ -1,27 +1,67 @@
-.navbar{
-    display: flex;
-    justify-content: space-around;
-    background-color: #B1AFFF;
-    color:white;
+.App {
+  margin-bottom: 30px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #b1afff;
+  color: white;
 }
 
-.navDiv{
-    position:relative
+.navDiv {
+  position: relative;
 }
 
-.itemsIcon{
-    position: absolute;
-    bottom: 8px;
-    right: 10px;
-    height: 24px;
-    width: 21px;
-
+.itemsIcon {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  height: 24px;
+  width: 21px;
 }
 
-.itemDiv{
-    background-color: white;
-    color: purple;
-    width: 20px;
-    text-align: center;
-    border-radius: 50%;
+.itemDiv {
+  background-color: white;
+  color: purple;
+  width: 20px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.cart {
+  text-align: center;
+}
+
+.clearButton {
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #bbe9ff;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 150px;
+}
+
+.cartInfo {
+  text-align: right;
+}
+
+.cartQuantity {
+  margin-right: 8px;
+}
+
+.cartQuantityButton {
+  border: none;
+  background-color: white;
+}
+
+.cartDeleteButton {
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #ffe9d0;
+  margin-top: 30px;
 }

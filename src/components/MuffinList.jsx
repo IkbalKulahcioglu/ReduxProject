@@ -7,20 +7,20 @@ function MuffinList() {
   return (
     <>
       {quantity < 1 ? (
-        <section>
+        <section className="cart">
           <header>
             <h2>Basket</h2>
             <h4>Basket is empty</h4>
           </header>
         </section>
       ) : (
-        <section>
+        <section className="cart">
           <header>
             <h2>Basket</h2>
           </header>
           <div>
             {cartItems.map((item) => {
-              return <MuffinItem {...item} />;
+              return <MuffinItem key={item.id} {...item} />;
             })}
           </div>
           <footer>
@@ -30,7 +30,7 @@ function MuffinList() {
                 Total <span>{total} $</span>
               </h4>
             </div>
-            <button>Clear</button>
+            <button className="clearButton">Clear</button>
           </footer>
         </section>
       )}
