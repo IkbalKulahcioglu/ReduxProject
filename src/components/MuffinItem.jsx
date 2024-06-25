@@ -1,26 +1,43 @@
 import React from "react";
 import { BsChevronUp, BsChevronDown } from "react-icons/bs";
 import { useDispatch } from "react-redux";
-import { removeItem } from "../control/cartSlice"
+import { removeItem, increase, decrease } from "../control/cartSlice";
 
 function MuffinItem({ id, title, price, img, quantity }) {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   return (
-    <div className="cartItem"> 
+    <div className="cartItem">
       <img src={img} alt="" />
       <div className="cartInfo">
         <h4>{title}</h4>
         <h4>{price}$</h4>
         <div>
-          <button className="cartQuantityButton">
+          <button
+            className="cartQuantityButton"
+            onClick={() => {
+              dispatch(increase(id));
+            }}
+          >
             <BsChevronUp />
           </button>
           <p className="cartQuantity">{quantity}</p>
-          <button className="cartQuantityButton">
+          <button
+            className="cartQuantityButton"
+            onClick={() => {
+              dispatch(decrease(id));
+            }}
+          >
             <BsChevronDown />
           </button>
         </div>
-        <button className="cartDeleteButton" onClick={()=>{ dispatch(removeItem(id))}}>Delete</button>
+        <button
+          className="cartDeleteButton"
+          onClick={() => {
+            dispatch(removeItem(id));
+          }}
+        >
+          Delete
+        </button>
       </div>
     </div>
   );
